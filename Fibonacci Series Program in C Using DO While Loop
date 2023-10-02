@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n, i = 0, a = 0, b = 1, nextTerm;
+    printf("Enter the number of terms in the Fibonacci series: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series (first %d terms):\n", n);
+    if (n >= 1) {
+        printf("%d, ", a);
+    }
+    if (n >= 2) {
+        printf("%d, ", b);
+    }
+
+    i = 2; 
+    do {
+        nextTerm = a + b;
+        printf("%d, ", nextTerm);
+        a = b;
+        b = nextTerm;
+        i++;
+    } while (i < n);
+
+    printf("\n");
+
+    return 0;
+}
